@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pokemon</title>
+</head>
+<body>
+<div class="mt-20">
+    <section class="py-5 container mx-auto">
+    <div class="flex items-center justify-between">
+            <input
+              type="text"
+              class="p-3 search-section rounded-[25px] border-[1px] w-[500px] border-slate-500"
+              placeholder="Search for a countries"
+            />
+          </div>
+       <ul class="poke-list flex flex-wrap gap-10 mt-10"></ul>
+    </section>
+</div>
+    <script src="./js/pakemon.js"></script>
+    <script src="./js/main.js"></script>
+     <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
