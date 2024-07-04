@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Pokemon</title>
-</head>
-<body>
-<div class="mt-20">
-    <section class="py-5 container mx-auto">
-    <div class="flex items-center justify-between">
-            <input
-              type="text"
-              class="p-3 search-section rounded-[25px] border-[1px] w-[500px] border-slate-500"
-              placeholder="Search for a countries"
-            />
-          </div>
-       <ul class="poke-list flex flex-wrap gap-10 mt-10"></ul>
-    </section>
-</div>
-    <script src="./js/pakemon.js"></script>
-    <script src="./js/main.js"></script>
-     <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-    }
-  </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
         }
       }
-    }
-  </script>
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="containers flex items-center justify-between">
+      <!-- left side -->
+      <div class="w-[60%] p-10 h-[100vh] overflow-y-auto">
+        <!-- search and select -->
+        <div class="flex gap-10">
+          <input
+            class="pokemon-search shadow w-[60%] py-[20px] pl-[40px] text-[18px] border-[2px] border-slate-400 rounded-[20px] outline-none"
+            type="text"
+            placeholder="Enter random name or number"
+          />
+          <select
+            class="pokemon-select shadow w-[40%] py-[20px] pl-[40px] text-[18px] border-[1px] border-slate-400 rounded-[20px] outline-none"
+            name=""
+            id=""
+          >
+            <option value="all">All</option>
+          </select>
+        </div>
+        <!-- ---------- -->
+        <ul
+          class="pokemon-list flex flex-wrap justify-between gap-[20px] mt-[20px]"
+        ></ul>
+      </div>
+      <!-- right side -->
+      <div class="w-[40%] modal hidden p-10 rounded-[20px] bg-sky-500/50"></div>
+    </div>
+    <script src="./js/pakemon.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
 </html>
